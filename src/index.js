@@ -6,9 +6,8 @@ import { TaskList } from './tasklist';
 const localStoragedata = JSON.parse(localStorage.getItem('library'));
 const newTasklist = new TaskList(localStoragedata || []);
 newTasklist.ShowTasks();
-// localStorage.clear();
 function addTasks() {
-  const taskText = document.getElementById('TaskInput');
+  const taskText = document.getElementById('taskinput');
   const TaskId = Math.floor(Math.random() * 1000); // idGenerate();
   const newTask = new Task(taskText.value, false, TaskId);
   taskText.value = '';
@@ -21,7 +20,7 @@ function clearCompleted() {
 }
 const clearAll = document.getElementById('clearall');
 clearAll.onclick = clearCompleted;
-const TasksInput = document.getElementById('TaskInput');
+const TasksInput = document.getElementById('taskinput');
 TasksInput.addEventListener('change', () => {
   addTasks();
 });

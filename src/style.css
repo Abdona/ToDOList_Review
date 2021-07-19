@@ -20,7 +20,7 @@ html {
   box-shadow: 0 2px 8px rgb(0 0 0 / 15%);
 }
 
-#TaskInput {
+#taskinput {
   border: none;
   padding: 22px;
   width: 100%;
@@ -29,7 +29,7 @@ html {
   border-bottom: 1px solid #f0f0f0;
 }
 
-#TaskInput:focus {
+#taskinput:focus {
   outline: none;
 }
 
@@ -71,7 +71,7 @@ html {
   background: #ffd4d4;
 }
 
-.Clear a {
+.clear a {
   margin: 0;
   padding: 20px;
   text-align: center;
@@ -92,23 +92,23 @@ html {
   outline: none;
 }
 
-#ListContainer {
+#listcontainer {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.Clear {
+.clear {
   margin: 0;
   background-color: #f0f0f0;
 }
 
-#List-title {
+#listtitle {
   border-bottom: 1px solid #f0f0f0;
   padding: 2px;
   margin-left: 2px;
 }
 
-#List-title p {
+#listtitle p {
   margin-left: 10px;
 }

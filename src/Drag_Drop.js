@@ -2,7 +2,7 @@
 /* eslint-disable no-restricted-syntax */
 // eslint-disable-next-line import/prefer-default-export
 export function dragDrop() {
-  const target = document.getElementById('ListContainer');
+  const target = document.getElementById('listcontainer');
   const items = target.getElementsByTagName('li');
   let current = null;
   for (const i of items) {
@@ -34,7 +34,7 @@ export function dragDrop() {
         if (currentpos < droppedpos) {
           this.parentNode.insertBefore(current, this.nextSibling);
           const ItemsList = [];
-          const target = document.getElementById('ListContainer');
+          const target = document.getElementById('listcontainer');
           const items = target.getElementsByTagName('li');
           for (const i of items) {
             const taskText = i.getElementsByTagName('div')[0].getElementsByTagName('textarea')[0].value;
@@ -45,7 +45,7 @@ export function dragDrop() {
         } else {
           this.parentNode.insertBefore(current, this);
           const ItemsList = [];
-          const target = document.getElementById('ListContainer');
+          const target = document.getElementById('listcontainer');
           const items = target.getElementsByTagName('li');
           for (const i of items) {
             const taskText = i.getElementsByTagName('div')[0].getElementsByTagName('textarea')[0].value;

@@ -40,9 +40,9 @@ export class TaskList {
     newListdots.setAttribute('src', MyImage);
     const taskDiv = document.createElement('div');
     taskDiv.setAttribute('id', 'taskcont');
-    document.getElementById('ListContainer').appendChild(newListitem).appendChild(newListcheck);
-    document.getElementById('ListContainer').appendChild(newListitem).appendChild(taskDiv).appendChild(newListtask);
-    document.getElementById('ListContainer').appendChild(newListitem).appendChild(newListdots);
+    document.getElementById('listcontainer').appendChild(newListitem).appendChild(newListcheck);
+    document.getElementById('listcontainer').appendChild(newListitem).appendChild(taskDiv).appendChild(newListtask);
+    document.getElementById('listcontainer').appendChild(newListitem).appendChild(newListdots);
     dragDrop();
   }
 
