@@ -8,12 +8,12 @@ export function dragDrop() {
   for (const i of items) {
     i.draggable = true;
 
-    i.addEventListener('dragstart', function () {
+    i.addEventListener('dragstart', () => {
       current = this;
     });
 
     // eslint-disable-next-line func-names
-    i.addEventListener('dragstart', function () {
+    i.addEventListener('dragstart', () => {
       current = this;
     });
 

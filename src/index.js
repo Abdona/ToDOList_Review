@@ -3,20 +3,21 @@ import './style.css';
 import { Task } from './Task';
 import { TaskList } from './tasklist';
 
-const NewTaskList = new TaskList(JSON.parse(localStorage.getItem('library')) || []);
-NewTaskList.ShowTasks();
+const localStoragedata = JSON.parse(localStorage.getItem('library'));
+const newTasklist = new TaskList(localStoragedata || []);
+newTasklist.ShowTasks();
 // localStorage.clear();
 function addTasks() {
-  const TaskText = document.getElementById('TaskInput');
+  const taskText = document.getElementById('TaskInput');
   const TaskId = Math.floor(Math.random() * 1000); // idGenerate();
-  const NewTask = new Task(TaskText.value, false, TaskId);
-  TaskText.value = '';
-  NewTaskList.addTask(NewTask);
-  NewTaskList.AddToStorage();
+  const newTask = new Task(taskText.value, false, TaskId);
+  taskText.value = '';
+  newTasklist.addTask(newTask);
+  newTasklist.addTostorage();
 }
 // eslint-disable-next-line no-unused-vars
 function clearCompleted() {
-  NewTaskList.clearCompleted();
+  newTasklist.clearCompleted();
 }
 const clearAll = document.getElementById('clearall');
 clearAll.onclick = clearCompleted;
@@ -26,4 +27,4 @@ TasksInput.addEventListener('change', () => {
 });
 
 // eslint-disable-next-line import/prefer-default-export
-export { NewTaskList };
+export { newTasklist };
